@@ -1,10 +1,12 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true,
+        "node": true
     },
-    "settings":{
-        "react":{
+    "settings": {
+        "react": {
             "version": "detect"
         }
     },
@@ -32,7 +34,9 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/prop-types": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off"
-
+        "@typescript-eslint/explicit-module-boundary-types": "off",  
+        "prettier/prettier": [        
+            "error", { "endOfLine": "auto" } 
+        ]
     }
 }
