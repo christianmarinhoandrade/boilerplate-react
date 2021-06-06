@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.13.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/react-router-dom": "^5.1.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -19,7 +15,8 @@
     "lint": "eslint src --max-warnings=0",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "lint-staged": {
     "src/**/*": [
@@ -40,11 +37,17 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.12.13",
+    "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.0",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
+    "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
@@ -55,8 +58,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "jest": "^27.0.4",
+    "jest-environment-jsdom": "^27.0.3",
     "jest-styled-components": "^7.0.4",
     "lint-staged": "^11.0.0",
+    "plop": "^2.7.4",
     "prettier": "2.3.0",
     "typescript": "^4.3.2"
   }
