@@ -1,12 +1,6 @@
 {
     "plugins": [
-        "@babel/plugin-syntax-jsx",
-        [
-            "babel-plugin-styled-components",
-            {
-                "ssr": false
-            }
-        ]
+        "@babel/plugin-syntax-jsx"
     ],
     "presets": [
         "@babel/preset-env",

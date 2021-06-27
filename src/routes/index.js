@@ -8,7 +8,7 @@ import routes from '~/utils/merge-routes'
 function Routes() {
   return (
     <Switch>
-      {routes.map((route) => (
+      {routes?.map((route) => (
         <Route
           key={route.path}
           path={route.path}
