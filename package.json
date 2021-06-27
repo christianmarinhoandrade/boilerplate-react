@@ -19,8 +19,8 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "eslint src --max-warnings=0 --fix",
-      "jest --findRelatedTests --bail"
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
     ]
   },
   "browserslist": {
