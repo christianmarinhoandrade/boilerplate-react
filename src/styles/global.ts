@@ -9,7 +9,7 @@ import ApisWebRegularWoff from '@/fonts/ApisWeb-Regular.woff'
 import ApisWebRegularWoff2 from '@/fonts/ApisWeb-Regular.woff2'
 
 type GlobalStylesProps = {
-  removeBg?: boolean
+  any?: string
 }
 
 const GlobalStyles: GlobalStyleComponent<
