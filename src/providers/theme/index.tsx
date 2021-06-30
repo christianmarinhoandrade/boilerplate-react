@@ -2,9 +2,11 @@ import React from 'react'
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 import theme from '../../styles/theme'
 
-function ThemeProvider(props) {
-  const { children } = props
+type ThemeProviderProps = {
+  children: React.ReactNode
+}
 
+function ThemeProvider({ children }: ThemeProviderProps) {
   return (
     <StyledComponentsThemeProvider theme={theme}>
       {children}

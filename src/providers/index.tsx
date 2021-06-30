@@ -1,9 +1,10 @@
 import React from 'react'
 import ThemeProvider from './theme'
 
-function Providers(props) {
-  const { children } = props
-
+type ThemeProps = {
+  children: React.ReactNode
+}
+function Providers({ children }: ThemeProps) {
   return <ThemeProvider>{children}</ThemeProvider>
 }
 
