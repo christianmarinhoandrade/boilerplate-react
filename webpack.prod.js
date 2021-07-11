@@ -15,6 +15,14 @@ var webpackConfig = merge(baseWebpackConfig, {
       filename: './static/css/[name].[chunkhash].css'
     })
   ],
+  rules: [
+    {
+      test: /\.(js|jsx|ts|tsx)?$/,
+      exclude: /(node_modules)/,
+      include: path.resolve(__dirname, 'src'),
+      loader: require.resolve('babel-loader')
+    }
+  ],
   optimization: {
     minimize: true,
     splitChunks: {

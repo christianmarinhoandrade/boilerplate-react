@@ -1,3 +1,4 @@
+const path = require('path')
 var { merge } = require('webpack-merge')
 var webpack = require('webpack')
 var baseWebpackConfig = require('./webpack.base')
@@ -17,6 +18,21 @@ module.exports = merge(baseWebpackConfig, {
     port,
     historyApiFallback: true,
     hot: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx|ts|tsx)?$/,
+        exclude: /(node_modules)/,
+        include: path.resolve(__dirname, 'src'),
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: [require.resolve('react-refresh/babel')]
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({

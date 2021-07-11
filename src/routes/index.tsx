@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom'
 
 import Route from './Route'
 
-import routes, { RouteProps } from '../utils/merge-routes'
+import routes, { RouteProps } from '~/utils/merge-routes'
 
 function Routes() {
   return (

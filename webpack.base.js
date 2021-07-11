@@ -5,25 +5,19 @@ const CopyPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     filename: '[name].js'
   },
   resolve: {
     extensions: ['.jsx', '.js', '.json', '.ts', '.tsx'],
     alias: {
-      '~': path.join(__dirname, 'src'),
-      '@': path.join(__dirname, 'public')
+      '~': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'public')
     }
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx|ts|tsx)?$/,
-        exclude: /(node_modules)/,
-        include: path.join(__dirname, 'src'),
-        loader: require.resolve('babel-loader')
-      },
       {
         test: /\.(css)$/,
         use: [

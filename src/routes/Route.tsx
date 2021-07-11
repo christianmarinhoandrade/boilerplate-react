@@ -1,6 +1,5 @@
-import React from 'react'
 import { Route as ReactRoute } from 'react-router-dom'
-import { RouteProps } from '../utils/merge-routes'
+import { RouteProps } from '~/utils/merge-routes'
 
 function Route(props: RouteProps & { exact: boolean }) {
   const { component: Component, path } = props
